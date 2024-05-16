@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build">
+  <Sdk Name="Microsoft.Build.Sql" Version="0.1.12-preview" />
+  <PropertyGroup>
+    <Name>sql_project</Name>
+    <ProjectGuid>{88299B2A-DAF0-4526-A4A5-45C7DF0BA010}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql160DatabaseSchemaProvider</DSP>
+    <ModelCollation>1033, CI</ModelCollation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Build Include="..\..\lab\lab\Agnt_password.sql" />
+    <Build Include="..\..\lab\lab\Claim.sql" />
+    <Build Include="..\..\lab\lab\Cursors&amp;Triggers.sql" />
+    <Build Include="..\..\lab\lab\Customer.sql" />
+    <Build Include="..\..\lab\lab\Cust_password.sql" />
+    <Build Include="..\..\lab\lab\cust_policy.sql" />
+    <Build Include="..\..\lab\lab\Foreign_keys.sql" />
+    <Build Include="..\..\lab\lab\Functions.sql" />
+    <Build Include="..\..\lab\lab\Payment.sql" />
+    <Build Include="..\..\lab\lab\Policy.sql" />
+    <Build Include="..\..\lab\lab\Procedures.sql" />
+    <Build Include="..\..\lab\lab\Queries.sql" />
+    <Build Include="..\Address.sql" />
+    <Build Include="..\Agent.sql" />
+  </ItemGroup>
+  <Target Name="BeforeBuild">
+    <Delete Files="$(BaseIntermediateOutputPath)\project.assets.json" />
+  </Target>
+</Project>
